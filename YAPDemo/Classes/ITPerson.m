@@ -91,7 +91,7 @@
                 NSMutableAttributedString *attrSubstring = [[NSMutableAttributedString alloc] initWithString:value];
                 NSMutableDictionary *attributes = [[NSMutableDictionary alloc] initWithDictionary:baseAttributes];
                 [attributes setValue:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName];
-                [attributes setValue:[UIColor colorWithRed:0.53f green:0.45f blue:0.82f alpha:1.0f] forKey:NSBackgroundColorAttributeName];
+                [attributes setValue:[UIColor colorWithRed:0.26f green:0.84f blue:0.32f alpha:1.0f] forKey:NSBackgroundColorAttributeName];
                 [attrSubstring setAttributes:attributes range:NSMakeRange(0, value.length)];
                 [mutAttrStr appendAttributedString:attrSubstring];
             }
