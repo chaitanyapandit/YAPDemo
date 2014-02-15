@@ -157,7 +157,7 @@
         [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
             
             YapDatabaseFullTextSearchSnippetOptions *snippetOptions = [[YapDatabaseFullTextSearchSnippetOptions alloc] init];
-            snippetOptions.numberOfTokens = 5;
+            snippetOptions.numberOfTokens = 2;
             
             [[transaction ext:@"people.search"] enumerateKeysAndObjectsMatching:[NSString stringWithFormat:@"%@*", text] withSnippetOptions:snippetOptions usingBlock:^(NSString *snippet, NSString *collection, NSString *key, ITPerson *person, BOOL *stop) {
                 
