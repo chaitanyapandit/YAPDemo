@@ -25,6 +25,8 @@
 		547BF82D18AF507D0022E2A3 /* ITTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */; };
 		547BF83018AF51320022E2A3 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 547BF82F18AF51320022E2A3 /* dummy.json */; };
 		547BF83218AF514C0022E2A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547BF83118AF514C0022E2A3 /* Images.xcassets */; };
+		547BF83418AF57780022E2A3 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF83318AF57780022E2A3 /* libxml2.2.dylib */; };
+		547BF83718AF577F0022E2A3 /* XMLBlockParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF83618AF577F0022E2A3 /* XMLBlockParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTableViewCell.m; sourceTree = "<group>"; };
 		547BF82F18AF51320022E2A3 /* dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
 		547BF83118AF514C0022E2A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		547BF83318AF57780022E2A3 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		547BF83518AF577F0022E2A3 /* XMLBlockParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLBlockParser.h; sourceTree = "<group>"; };
+		547BF83618AF577F0022E2A3 /* XMLBlockParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLBlockParser.m; sourceTree = "<group>"; };
 		5EB0320509874C5DBDF5D2CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		7C4AC0BADF2747C8956DA11D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547BF83418AF57780022E2A3 /* libxml2.2.dylib in Frameworks */,
 				547BF7EE18AF4D740022E2A3 /* CoreGraphics.framework in Frameworks */,
 				547BF7F018AF4D740022E2A3 /* UIKit.framework in Frameworks */,
 				547BF7EC18AF4D740022E2A3 /* Foundation.framework in Frameworks */,
@@ -114,6 +120,7 @@
 		547BF7EA18AF4D740022E2A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				547BF83318AF57780022E2A3 /* libxml2.2.dylib */,
 				547BF7EB18AF4D740022E2A3 /* Foundation.framework */,
 				547BF7ED18AF4D740022E2A3 /* CoreGraphics.framework */,
 				547BF7EF18AF4D740022E2A3 /* UIKit.framework */,
@@ -166,6 +173,8 @@
 		547BF82018AF50410022E2A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				547BF83518AF577F0022E2A3 /* XMLBlockParser.h */,
+				547BF83618AF577F0022E2A3 /* XMLBlockParser.m */,
 				547BF82B18AF507D0022E2A3 /* ITTableViewCell.h */,
 				547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */,
 				547BF82118AF50410022E2A3 /* ITAppDelegate.h */,
@@ -329,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547BF83718AF577F0022E2A3 /* XMLBlockParser.m in Sources */,
 				547BF82D18AF507D0022E2A3 /* ITTableViewCell.m in Sources */,
 				547BF7F818AF4D740022E2A3 /* main.m in Sources */,
 				547BF82718AF50410022E2A3 /* ITAppDelegate.m in Sources */,

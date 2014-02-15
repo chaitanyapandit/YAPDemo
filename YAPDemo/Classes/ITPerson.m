@@ -7,6 +7,7 @@
 //
 
 #import "ITPerson.h"
+#import "XMLBlockParser.h"
 
 @implementation ITPerson
 
@@ -55,6 +56,52 @@
     }
     
     return newObject;
+}
+
+- (NSAttributedString *)attributedSnippet
+{
+    NSAttributedString *retVal = nil;
+    if (self.searchSnippet)
+    {
+        NSString *text = [NSString stringWithFormat:@"<xyzw>%@</xyzw>", self.searchSnippet];
+        __block NSMutableAttributedString  *mutAttrStr = [[NSMutableAttributedString alloc] initWithString:@""];
+        NSMutableDictionary *baseAttributes = [[NSMutableDictionary alloc] init];
+        [baseAttributes setValue:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName];
+        [baseAttributes setValue:[UIFont systemFontOfSize:14.0f] forKey:NSFontAttributeName];
+
+                XMLBlockParser *parser = [[XMLBlockParser alloc] initWithData:[text dataUsingEncoding:NSUTF8StringEncoding]];
+        __block BOOL  hasAttributes = NO;
+        parser.beginElementBlock = ^(NSString* elementName, NSDictionary *attributeDict) {
+            if (![elementName isEqualToString:@"xyzw"])
+            {
+                hasAttributes = YES;
+            }
+        };
+        parser.foundCharactersBlock = ^(NSString* elementName, NSString *value) {
+            if (![elementName isEqualToString:@"b"])
+            {
+                NSMutableAttributedString *attrSubstring = [[NSMutableAttributedString alloc] initWithString:value];
+                [attrSubstring setAttributes:baseAttributes range:NSMakeRange(0, value.length)];
+                [mutAttrStr appendAttributedString:attrSubstring];
+            }
+        };
+        parser.endElementBlock = ^(NSString *elementName, NSDictionary *attributes, NSString *value){
+            if ([elementName isEqualToString:@"b"])
+            {
+                NSMutableAttributedString *attrSubstring = [[NSMutableAttributedString alloc] initWithString:value];
+                NSMutableDictionary *attributes = [[NSMutableDictionary alloc] initWithDictionary:baseAttributes];
+                [attributes setValue:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName];
+                [attributes setValue:[UIColor colorWithRed:0.53f green:0.45f blue:0.82f alpha:1.0f] forKey:NSBackgroundColorAttributeName];
+                [attrSubstring setAttributes:attributes range:NSMakeRange(0, value.length)];
+                [mutAttrStr appendAttributedString:attrSubstring];
+            }
+        };
+        [parser parse];
+        
+        retVal = mutAttrStr;
+    }
+    
+    return retVal;
 }
 
 @end

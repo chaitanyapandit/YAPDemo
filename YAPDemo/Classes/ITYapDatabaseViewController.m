@@ -140,6 +140,11 @@
     [self.db registerExtension:self.peopleSearch withName:@"people.search"];
 }
 
+- (void)clearSnippets
+{
+    [self.searchResults makeObjectsPerformSelector:@selector(setSearchSnippet:) withObject:nil];
+}
+
 -(void)filter:(NSString*)text
 {
     [self.activityIndicator startAnimating];
@@ -151,8 +156,12 @@
         NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:100];
         [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
             
-            [[transaction ext:@"people.search"] enumerateKeysAndObjectsMatching:[NSString stringWithFormat:@"%@*", text] usingBlock:^(NSString *collection, NSString *key, ITPerson *person, BOOL *stop) {
+            YapDatabaseFullTextSearchSnippetOptions *snippetOptions = [[YapDatabaseFullTextSearchSnippetOptions alloc] init];
+            snippetOptions.numberOfTokens = 5;
+            
+            [[transaction ext:@"people.search"] enumerateKeysAndObjectsMatching:[NSString stringWithFormat:@"%@*", text] withSnippetOptions:snippetOptions usingBlock:^(NSString *snippet, NSString *collection, NSString *key, ITPerson *person, BOOL *stop) {
                 
+                person.searchSnippet = snippet;
                 [results addObject:person];
             }];
             
@@ -162,6 +171,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (!self.searchResults)
                     self.searchResults = [[NSMutableArray alloc] initWithCapacity:100];
+                [self clearSnippets];
                 [self.activityIndicator stopAnimating];
                 [self updateNavigationBar];
                 [self.searchResults setArray:results];
@@ -180,6 +190,7 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];
+    [self clearSnippets];
     self.searchResults = nil;
     [self.tableView reloadData];
 }
@@ -197,15 +208,15 @@
 {
     __block NSInteger rows = 0;
     
-    if (tableView == self.tableView)
+    if (self.searchResults)
+    {
+        rows = self.searchResults.count;
+    }
+    else
     {
         [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
             rows = [transaction numberOfKeysInCollection:@"people"];
         }];
-    }
-    else
-    {
-        rows = self.searchResults.count;
     }
     
     return rows;
@@ -216,7 +227,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"yap.database" forIndexPath:indexPath];
     __block ITPerson *person = nil;
 
-    if (tableView == self.tableView)
+    if (self.searchResults)
+    {
+        person = [self.searchResults objectAtIndex:indexPath.row];
+    }
+    else
     {
         [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
             
@@ -224,11 +239,12 @@
             
         }];
     }
-    else
-        person = [self.searchResults objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [[person valueForKey:@"name"] description];
-    cell.detailTextLabel.text = [[person valueForKey:@"about"] description];
+    if (person.attributedSnippet)
+        cell.detailTextLabel.attributedText = person.attributedSnippet;
+    else
+        cell.detailTextLabel.text = person.about;
 
     return cell;
 }

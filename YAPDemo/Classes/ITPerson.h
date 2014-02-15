@@ -16,6 +16,9 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * udid;
 
+@property (nonatomic, retain) NSString * searchSnippet;
+
 - (void)updateWithInfo:(NSDictionary *)info;
+- (NSAttributedString *)attributedSnippet;
 
 @end
