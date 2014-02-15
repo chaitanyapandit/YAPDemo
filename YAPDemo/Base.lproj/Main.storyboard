@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZHz-Y6-rSO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PXu-Ma-bXU">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ZHz-Y6-rSO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LL4-1E-ySn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cje-KZ-ypt" kind="relationship" relationship="rootViewController" id="QA5-4M-O3a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA3-Y3-PX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="117"/>
+        </scene>
+        <!--Yap Database View Controller-->
+        <scene sceneID="tf3-rZ-fNl">
+            <objects>
+                <tableViewController id="cje-KZ-ypt" customClass="ITYapDatabaseViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UHd-hG-l0O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="7wH-Xx-yfr">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="cje-KZ-ypt" id="32r-Sd-9ff"/>
+                            </connections>
+                        </searchBar>
+                        <connections>
+                            <outlet property="dataSource" destination="cje-KZ-ypt" id="a2L-yO-RDs"/>
+                            <outlet property="delegate" destination="cje-KZ-ypt" id="P1K-wI-IBs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="T2i-TP-b3K">
+                        <barButtonItem key="rightBarButtonItem" title="Load" id="C0J-xM-hu1">
+                            <connections>
+                                <action selector="load:" destination="cje-KZ-ypt" id="XmX-Uc-gZX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loadButtonItem" destination="C0J-xM-hu1" id="0L0-HC-mXt"/>
+                        <outlet property="searchDisplayController" destination="FtY-VZ-CkG" id="zd5-0L-azp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M16-uQ-HUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="FtY-VZ-CkG">
+                    <connections>
+                        <outlet property="delegate" destination="cje-KZ-ypt" id="OgG-lS-Dhi"/>
+                        <outlet property="searchBar" destination="7wH-Xx-yfr" id="Bai-iL-l8d"/>
+                        <outlet property="searchContentsController" destination="cje-KZ-ypt" id="0Gx-fa-Qpa"/>
+                        <outlet property="searchResultsDataSource" destination="cje-KZ-ypt" id="3xo-Mr-6i2"/>
+                        <outlet property="searchResultsDelegate" destination="cje-KZ-ypt" id="VQS-10-Qgn"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-128" y="114"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

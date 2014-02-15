@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09E1470B92E54DF495037023 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4AC0BADF2747C8956DA11D /* libPods.a */; };
+		547BF7EC18AF4D740022E2A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF7EB18AF4D740022E2A3 /* Foundation.framework */; };
+		547BF7EE18AF4D740022E2A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF7ED18AF4D740022E2A3 /* CoreGraphics.framework */; };
+		547BF7F018AF4D740022E2A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF7EF18AF4D740022E2A3 /* UIKit.framework */; };
+		547BF7F618AF4D740022E2A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 547BF7F418AF4D740022E2A3 /* InfoPlist.strings */; };
+		547BF7F818AF4D740022E2A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF7F718AF4D740022E2A3 /* main.m */; };
+		547BF7FF18AF4D740022E2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547BF7FD18AF4D740022E2A3 /* Main.storyboard */; };
+		547BF80B18AF4D740022E2A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF80A18AF4D740022E2A3 /* XCTest.framework */; };
+		547BF80C18AF4D740022E2A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF7EB18AF4D740022E2A3 /* Foundation.framework */; };
+		547BF80D18AF4D740022E2A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547BF7EF18AF4D740022E2A3 /* UIKit.framework */; };
+		547BF81518AF4D740022E2A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 547BF81318AF4D740022E2A3 /* InfoPlist.strings */; };
+		547BF81718AF4D740022E2A3 /* YAPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF81618AF4D740022E2A3 /* YAPDemoTests.m */; };
+		547BF82718AF50410022E2A3 /* ITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF82218AF50410022E2A3 /* ITAppDelegate.m */; };
+		547BF82818AF50410022E2A3 /* ITYapDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF82418AF50410022E2A3 /* ITYapDatabaseViewController.m */; };
+		547BF82918AF50410022E2A3 /* ITPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF82618AF50410022E2A3 /* ITPerson.m */; };
+		547BF82D18AF507D0022E2A3 /* ITTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */; };
+		547BF83018AF51320022E2A3 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 547BF82F18AF51320022E2A3 /* dummy.json */; };
+		547BF83218AF514C0022E2A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547BF83118AF514C0022E2A3 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		547BF80E18AF4D740022E2A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 547BF7E018AF4D740022E2A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 547BF7E718AF4D740022E2A3;
+			remoteInfo = YAPDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		547BF7E818AF4D740022E2A3 /* YAPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		547BF7EB18AF4D740022E2A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		547BF7ED18AF4D740022E2A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		547BF7EF18AF4D740022E2A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		547BF7F318AF4D740022E2A3 /* YAPDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YAPDemo-Info.plist"; sourceTree = "<group>"; };
+		547BF7F518AF4D740022E2A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		547BF7F718AF4D740022E2A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		547BF7F918AF4D740022E2A3 /* YAPDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YAPDemo-Prefix.pch"; sourceTree = "<group>"; };
+		547BF7FE18AF4D740022E2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		547BF80918AF4D740022E2A3 /* YAPDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAPDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		547BF80A18AF4D740022E2A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		547BF81218AF4D740022E2A3 /* YAPDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YAPDemoTests-Info.plist"; sourceTree = "<group>"; };
+		547BF81418AF4D740022E2A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		547BF81618AF4D740022E2A3 /* YAPDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAPDemoTests.m; sourceTree = "<group>"; };
+		547BF82118AF50410022E2A3 /* ITAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITAppDelegate.h; sourceTree = "<group>"; };
+		547BF82218AF50410022E2A3 /* ITAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITAppDelegate.m; sourceTree = "<group>"; };
+		547BF82318AF50410022E2A3 /* ITYapDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITYapDatabaseViewController.h; sourceTree = "<group>"; };
+		547BF82418AF50410022E2A3 /* ITYapDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITYapDatabaseViewController.m; sourceTree = "<group>"; };
+		547BF82518AF50410022E2A3 /* ITPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITPerson.h; sourceTree = "<group>"; };
+		547BF82618AF50410022E2A3 /* ITPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITPerson.m; sourceTree = "<group>"; };
+		547BF82B18AF507D0022E2A3 /* ITTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTableViewCell.h; sourceTree = "<group>"; };
+		547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTableViewCell.m; sourceTree = "<group>"; };
+		547BF82F18AF51320022E2A3 /* dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
+		547BF83118AF514C0022E2A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EB0320509874C5DBDF5D2CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7C4AC0BADF2747C8956DA11D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		547BF7E518AF4D740022E2A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF7EE18AF4D740022E2A3 /* CoreGraphics.framework in Frameworks */,
+				547BF7F018AF4D740022E2A3 /* UIKit.framework in Frameworks */,
+				547BF7EC18AF4D740022E2A3 /* Foundation.framework in Frameworks */,
+				09E1470B92E54DF495037023 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547BF80618AF4D740022E2A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF80B18AF4D740022E2A3 /* XCTest.framework in Frameworks */,
+				547BF80D18AF4D740022E2A3 /* UIKit.framework in Frameworks */,
+				547BF80C18AF4D740022E2A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		547BF7DF18AF4D740022E2A3 = {
+			isa = PBXGroup;
+			children = (
+				547BF7F118AF4D740022E2A3 /* YAPDemo */,
+				547BF81018AF4D740022E2A3 /* YAPDemoTests */,
+				547BF7EA18AF4D740022E2A3 /* Frameworks */,
+				547BF7E918AF4D740022E2A3 /* Products */,
+				5EB0320509874C5DBDF5D2CA /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		547BF7E918AF4D740022E2A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				547BF7E818AF4D740022E2A3 /* YAPDemo.app */,
+				547BF80918AF4D740022E2A3 /* YAPDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		547BF7EA18AF4D740022E2A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				547BF7EB18AF4D740022E2A3 /* Foundation.framework */,
+				547BF7ED18AF4D740022E2A3 /* CoreGraphics.framework */,
+				547BF7EF18AF4D740022E2A3 /* UIKit.framework */,
+				547BF80A18AF4D740022E2A3 /* XCTest.framework */,
+				7C4AC0BADF2747C8956DA11D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		547BF7F118AF4D740022E2A3 /* YAPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				547BF82018AF50410022E2A3 /* Classes */,
+				547BF82E18AF51320022E2A3 /* Resources */,
+				547BF82A18AF50470022E2A3 /* User Interface */,
+				547BF7F218AF4D740022E2A3 /* Supporting Files */,
+			);
+			path = YAPDemo;
+			sourceTree = "<group>";
+		};
+		547BF7F218AF4D740022E2A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				547BF7F318AF4D740022E2A3 /* YAPDemo-Info.plist */,
+				547BF7F418AF4D740022E2A3 /* InfoPlist.strings */,
+				547BF7F718AF4D740022E2A3 /* main.m */,
+				547BF7F918AF4D740022E2A3 /* YAPDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		547BF81018AF4D740022E2A3 /* YAPDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				547BF81618AF4D740022E2A3 /* YAPDemoTests.m */,
+				547BF81118AF4D740022E2A3 /* Supporting Files */,
+			);
+			path = YAPDemoTests;
+			sourceTree = "<group>";
+		};
+		547BF81118AF4D740022E2A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				547BF81218AF4D740022E2A3 /* YAPDemoTests-Info.plist */,
+				547BF81318AF4D740022E2A3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		547BF82018AF50410022E2A3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				547BF82B18AF507D0022E2A3 /* ITTableViewCell.h */,
+				547BF82C18AF507D0022E2A3 /* ITTableViewCell.m */,
+				547BF82118AF50410022E2A3 /* ITAppDelegate.h */,
+				547BF82218AF50410022E2A3 /* ITAppDelegate.m */,
+				547BF82318AF50410022E2A3 /* ITYapDatabaseViewController.h */,
+				547BF82418AF50410022E2A3 /* ITYapDatabaseViewController.m */,
+				547BF82518AF50410022E2A3 /* ITPerson.h */,
+				547BF82618AF50410022E2A3 /* ITPerson.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		547BF82A18AF50470022E2A3 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				547BF7FD18AF4D740022E2A3 /* Main.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		547BF82E18AF51320022E2A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				547BF83118AF514C0022E2A3 /* Images.xcassets */,
+				547BF82F18AF51320022E2A3 /* dummy.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		547BF7E718AF4D740022E2A3 /* YAPDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547BF81A18AF4D740022E2A3 /* Build configuration list for PBXNativeTarget "YAPDemo" */;
+			buildPhases = (
+				6AC136AF982246FBB8ABDA50 /* Check Pods Manifest.lock */,
+				547BF7E418AF4D740022E2A3 /* Sources */,
+				547BF7E518AF4D740022E2A3 /* Frameworks */,
+				547BF7E618AF4D740022E2A3 /* Resources */,
+				C6D834F62D2B4528B77EFCB2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YAPDemo;
+			productName = YAPDemo;
+			productReference = 547BF7E818AF4D740022E2A3 /* YAPDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		547BF80818AF4D740022E2A3 /* YAPDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 547BF81D18AF4D740022E2A3 /* Build configuration list for PBXNativeTarget "YAPDemoTests" */;
+			buildPhases = (
+				547BF80518AF4D740022E2A3 /* Sources */,
+				547BF80618AF4D740022E2A3 /* Frameworks */,
+				547BF80718AF4D740022E2A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				547BF80F18AF4D740022E2A3 /* PBXTargetDependency */,
+			);
+			name = YAPDemoTests;
+			productName = YAPDemoTests;
+			productReference = 547BF80918AF4D740022E2A3 /* YAPDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		547BF7E018AF4D740022E2A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "#include tech.";
+				TargetAttributes = {
+					547BF80818AF4D740022E2A3 = {
+						TestTargetID = 547BF7E718AF4D740022E2A3;
+					};
+				};
+			};
+			buildConfigurationList = 547BF7E318AF4D740022E2A3 /* Build configuration list for PBXProject "YAPDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 547BF7DF18AF4D740022E2A3;
+			productRefGroup = 547BF7E918AF4D740022E2A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				547BF7E718AF4D740022E2A3 /* YAPDemo */,
+				547BF80818AF4D740022E2A3 /* YAPDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		547BF7E618AF4D740022E2A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF7F618AF4D740022E2A3 /* InfoPlist.strings in Resources */,
+				547BF83218AF514C0022E2A3 /* Images.xcassets in Resources */,
+				547BF83018AF51320022E2A3 /* dummy.json in Resources */,
+				547BF7FF18AF4D740022E2A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547BF80718AF4D740022E2A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF81518AF4D740022E2A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AC136AF982246FBB8ABDA50 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D834F62D2B4528B77EFCB2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		547BF7E418AF4D740022E2A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF82D18AF507D0022E2A3 /* ITTableViewCell.m in Sources */,
+				547BF7F818AF4D740022E2A3 /* main.m in Sources */,
+				547BF82718AF50410022E2A3 /* ITAppDelegate.m in Sources */,
+				547BF82818AF50410022E2A3 /* ITYapDatabaseViewController.m in Sources */,
+				547BF82918AF50410022E2A3 /* ITPerson.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		547BF80518AF4D740022E2A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547BF81718AF4D740022E2A3 /* YAPDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		547BF80F18AF4D740022E2A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 547BF7E718AF4D740022E2A3 /* YAPDemo */;
+			targetProxy = 547BF80E18AF4D740022E2A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		547BF7F418AF4D740022E2A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547BF7F518AF4D740022E2A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		547BF7FD18AF4D740022E2A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547BF7FE18AF4D740022E2A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		547BF81318AF4D740022E2A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				547BF81418AF4D740022E2A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		547BF81818AF4D740022E2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		547BF81918AF4D740022E2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		547BF81B18AF4D740022E2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB0320509874C5DBDF5D2CA /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YAPDemo/YAPDemo-Prefix.pch";
+				INFOPLIST_FILE = "YAPDemo/YAPDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		547BF81C18AF4D740022E2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB0320509874C5DBDF5D2CA /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YAPDemo/YAPDemo-Prefix.pch";
+				INFOPLIST_FILE = "YAPDemo/YAPDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		547BF81E18AF4D740022E2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YAPDemo.app/YAPDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YAPDemo/YAPDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "YAPDemoTests/YAPDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		547BF81F18AF4D740022E2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YAPDemo.app/YAPDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YAPDemo/YAPDemo-Prefix.pch";
+				INFOPLIST_FILE = "YAPDemoTests/YAPDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		547BF7E318AF4D740022E2A3 /* Build configuration list for PBXProject "YAPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547BF81818AF4D740022E2A3 /* Debug */,
+				547BF81918AF4D740022E2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		547BF81A18AF4D740022E2A3 /* Build configuration list for PBXNativeTarget "YAPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547BF81B18AF4D740022E2A3 /* Debug */,
+				547BF81C18AF4D740022E2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		547BF81D18AF4D740022E2A3 /* Build configuration list for PBXNativeTarget "YAPDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547BF81E18AF4D740022E2A3 /* Debug */,
+				547BF81F18AF4D740022E2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 547BF7E018AF4D740022E2A3 /* Project object */;
+}
